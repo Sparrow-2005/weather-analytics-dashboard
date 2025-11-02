@@ -47,7 +47,7 @@ const Navbar = () => {
           </div>
 
           {/* Navigation Links */}
-          <div className="hidden md:flex items-center gap-6 py-1">
+          <div className="flex items-center gap-6 py-1">
             <Link to="/" className="hover:text-blue-400 transition duration-200">
               Home
             </Link>

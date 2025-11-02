@@ -10,10 +10,10 @@ router.get('/google', passport.authenticate('google', { scope: ['profile', 'emai
 // @route   GET /auth/google/callback
 router.get(
     '/google/callback',
-    passport.authenticate('google', { failureRedirect: 'http://localhost:3000/' }),
+    passport.authenticate('google', { failureRedirect: process.env.REACT_BASE_URL }),
     (req, res) => {
         // Successful authentication, redirect to frontend dashboard.
-        res.redirect('http://localhost:3000/');
+        res.redirect(process.env.REACT_BASE_URL);
     }
 );
 

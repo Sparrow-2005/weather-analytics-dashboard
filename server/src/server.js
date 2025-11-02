@@ -13,7 +13,7 @@ connectDB();
 
 // Middleware
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: process.env.REACT_BASE_URL,
     credentials: true
 }));
 app.use(express.json());
